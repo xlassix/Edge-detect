@@ -1,0 +1,9 @@
+numpy
+flask
+flask-cors
+flask-restplus
+image
+gunicorn
+imageio
+scipy
+sklearn

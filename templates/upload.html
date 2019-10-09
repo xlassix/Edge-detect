@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="upload.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>upload</title>
+</head>
+<body>
+        <header class="jumbotron"  style="background: rgb(68, 68, 202); color: white;">
+                <div class="container">
+                    <div class="row row-header justify-content-center">
+                        <div class="col-12 col-sm-6" >
+                            <h1>Egde Detect</h1>
+                            <p class="justify-content-center">(includes texture)</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+    <!--<form id="upload-form" action="{{url_for('upload')}}" method=post enctype="multipart/form-data">
+
+        <input type="file" name="file" accept="image/*" class="upload">
+
+        <input type="submit" value="submit">
+    </form>-->
+    <div class="container" >
+        <div class="row justify-content-center ">
+            <div class='col-9 col-sm-8 col-md-12 row justify-content-center align-self-center  mt-5 mb-5'>
+                <form class="input-group" method="POST" action="{{url_for('upload')}}"  enctype="multipart/form-data">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Upload</button>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" accept="image/*" class="form-control-file" name="file" id="inputGroupFile01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer fixed-bottom">
+            <div class="row justify-content-center">             
+                    <div class="col-auto">
+                        <p>© Copyright 2019 Attendance Management System</p>
+                    </div>
+            </div>
+        </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+            $('#inputGroupFile01').on('change',function(){
+            //get the file name
+            var fileName = $(this).val();
+            //replace the "Choose a file" label
+            $(this).next('.custom-file-label').html(fileName);
+        })
+    </script>
+</body>
+</html>
