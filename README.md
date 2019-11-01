@@ -5,7 +5,7 @@
 ### [#1]
 
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
@@ -19,7 +19,7 @@ from PIL import Image
 ### [#2]
 
 
-```
+```python
 def image_processor(path_to_image_file,width_quality=720):
     #width_quality is a paramater used to reshape the image for optimal performance
     #the higher the width_quality == higher number of pixels == longer the excution time for the  function conv
@@ -46,7 +46,7 @@ def image_processor(path_to_image_file,width_quality=720):
 ### [#3]
 
 
-```
+```python
 def conv(image,im_filter):
     #compute dimesions of image
     height,width=image.shape
@@ -74,7 +74,7 @@ def conv(image,im_filter):
 ### [#4]
 
 
-```
+```python
 edge_detection=([[4,2,4]
                 ,[-1,0,1]
                 ,[-4,-2,-4]])
@@ -82,6 +82,15 @@ edge_detection=([[4,2,4]
 conv(image_processor("download.jpg"),edge_detection)
 ```
 Output:
+
+    []
+
+
+
+
+![image](./readme/download.jpg)
+![image](./readme/myfirst.png)
+
  ## define a filter to any (m x n) dimension as edge_detection
 
 ---
@@ -89,7 +98,7 @@ Output:
 ### [#5]
 
 
-```
+```python
 edge_detection=([[4,2,4]
                 ,[-1,0,1]
                 ,[-4,-2,-4]])
@@ -101,22 +110,21 @@ edge_detection=([[4,2,4]
 ### [#6]
 
 
-```
+```python
 conv(image_processor("download1.jpg"),edge_detection)
 ```
 Output:
- ### EXAMPLE 2
 
----
-
-### [#7]
+    []
 
 
-```
-edge_detection=([[1,0,-1]
-                ,[-2,0,2]
-                ,[1,0,-1]]) 
-#FOR STRONG EGDES
+
+
+![image](./readme/download1.jpg)
+![image](./readme/mysecond.png)
+
+
+
 ```
 
 
@@ -125,17 +133,16 @@ edge_detection=([[1,0,-1]
 ### [#8]
 
 
-```
+```python
 conv(image_processor("download1.jpg"),edge_detection)
 ```
 Output:
 
-
----
-
-### [#9]
+    []
 
 
-```
 
-```
+
+![png](output_14_1.png)
+
+
