@@ -130,19 +130,4 @@ Output:
 
 ---
 
-### [#8]
-
-
-```python
-conv(image_processor("download1.jpg"),edge_detection)
-```
-Output:
-
-    []
-
-
-
-
-![png](output_14_1.png)
-
 
